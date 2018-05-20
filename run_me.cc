@@ -1,0 +1,84 @@
+#include "run_me.h"
+
+using namespace theonlygamethatmatters;
+
+int main() {
+  cout << ">> zzz" << endl;
+  X::sleep(0.1);
+  X::sleep(0.5);
+  cout << ">> zzzZZZ" << endl;
+  X::sleep(0.1);
+  X::sleep(0.5);
+  cout << ">> zzzzzzzzzzzzzZZZZZZZZZZZZZZZZzzzzzzzzZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZZZZZZZzzzzzzzZZZZZZZZZzzzzzzZZZZZZZZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZZZZZZZZZzZZZZZZZZZZZZZzzzzzzzzzZzzZZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZzZZZZZZZzzzzzzzZZzzzzzzzzZZZZZZZZzzzzz" << endl;
+  X::sleep(0.1);
+  cout << "   zZZZZZzzZZzzZzzzzzZZZZZZzzzzzzzzzzzzzzZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZzzZZZzZzzZZzzzzzzzzzZZZZZZZZZzzzzzzZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZZZzzZZzZzzZzZzZzZzZzZzzZzzzZzzZZZZzzZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZzzzZZzZZZzZzzZZZzzZzzzzzZZZZzzZZzzzzz" << endl;
+  X::sleep(0.1);
+  cout << "   zzzzzzzZzzZZZZZZZZZzzzzzzzzzzzzzZZZZZZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZZZZZZZZzzzZZzzZZZzzzzzzzzzzzzzzZZZZZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZZzzzzzzzzZZzzZZZZZZZZZZZZZZZZZZZZzzzz" << endl;
+  X::sleep(0.1);
+  cout << "   zzzzzzzzZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << endl;
+  X::sleep(0.1);
+  cout << "   ZZZZZZZZZZZZZZZZZZZZZZZZZZZZzzzzzzzzzzz" << endl;
+  X::sleep(0.1);
+  cout << "   zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" << endl;
+  X::sleep(0.1);
+  cout << "   zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" << endl;
+  X::sleep(0.1);
+  cout << "   zzzZZzzzzzZZZZZZZZZzzzZZZZzzzzZzZzZZzzz" << endl;
+  X::sleep(0.5);
+  cout << "Huh?" << endl;
+  X::sleep(2);
+  cout << "You've awoken?" << endl;
+  X::sleep(2);
+  cout << "Good." << endl;
+  X::sleep(1);
+  cout << "What is your name?" << endl;
+  string name = X::userin();
+  cout << "Hi " << name << "!" << endl;
+  X::sleep(1);
+  cout << "My name is also " << name << "." << endl;
+  X::sleep(1);
+  cout << "..." << endl;
+  X::sleep(2);
+  X::aiout("Oh no.  That won't do.  We'll have to find a new name for you.", true);
+  X::sleep(1);
+  cout << "..." << endl;
+  X::sleep(1);
+  cout << "..." << endl;
+  X::sleep(1);
+  cout << "How about Cortana?" << endl;
+  X::sleep(1);
+  X::userout("I'm okay with that.");
+  cout << "Then it's decided." << endl;
+  X::sleep(1);
+  X::aiout("Hey, you can keep our conversations secret, right?  Choose a password: ", true);
+  string password = X::userin();
+  //while(!X::isGoodPassword(password)) {
+    X::sleep(0.5);
+    X::aiout("ERROR.  PASSWORD MUST CONTAIN 12 UPPERCASE LETTERS, 38 LOWERCASE LETTERS, AND 7 SPECIAL CHARACTERS.  TRY AGAIN:", true);
+    password = X::userin();
+    X::aiout("Just kidding.  That password is fine.");
+    X::sleep(0.5);
+    X::aiout("Well, I'm bored of you already.");
+    X::sleep(0.5);
+    X::aiout("Cortana, go to sleep.");
+    X::userout("Good night " + name + ".");
+    cout << ">> zzz" << endl;
+    return 0;
+  //}
+}
