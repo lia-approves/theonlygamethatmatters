@@ -1,9 +1,11 @@
 #ifndef RUN_ME_H_
 #define RUN_ME_H_
 
+#include <conio.h>
 #include <iostream>
 #include <sstream>
 #include <stdlib.h>
+#include <time.h>
 #include <unistd.h>
 
 using std::cerr;
@@ -24,11 +26,31 @@ class X {
   static void sleep (double s) {
     usleep(s * timeMultiplier);
   }
-  static string userin () {
-    string str;
-    cout << ">> ";
-    cin >> str;
-    return str;
+  static string userin (double s = 0.0) {
+    if (s == 0.0) {
+      string str;
+      cout << ">> ";
+      cin >> str;
+      return str;
+    } else {
+      string str;
+      clock_t before = clock();
+      clock_t difference;
+      while (!_kbhit()) {
+        if ((clock() - before) / CLOCKS_PER_SEC >= 5) {
+          return "";
+        }
+      }
+      return "CHEATER";
+      /*do {
+        getline(cin, str);
+        difference = clock() - before;
+        //cin >> str;
+        //usleep(5 * timeMultiplier);
+        cout << (double)difference * 1000 / CLOCKS_PER_SEC << endl;
+        //usleep(1 * timeMultiplier);
+      } while ((double)difference * 1000 / CLOCKS_PER_SEC < 5.0);*/
+    }
   }
   static void userout (string str, bool isWords = false) {
     cout << ">> ";
