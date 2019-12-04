@@ -1,10 +1,12 @@
 #ifndef RUN_ME_H_
 #define RUN_ME_H_
 
-#include <conio.h>
 #include <iostream>
 #include <sstream>
+#include <stdio.h>
 #include <stdlib.h>
+#include <sys/select.h>
+#include <termios.h>
 #include <time.h>
 #include <unistd.h>
 
@@ -21,6 +23,22 @@ namespace theonlygamethatmatters {
 static int lineLength = 40;
 static double timeMultiplier = 1000000;
 
+static int kbhit(void) {
+  struct timeval tv;
+  fd_set read_fd;
+  tv.tv_sec=0;
+  tv.tv_usec=0;
+  FD_ZERO(&read_fd);
+  FD_SET(0,&read_fd);
+  if(select(1, &read_fd, NULL, NULL, &tv) == -1) {
+    return 0;
+  }
+  if(FD_ISSET(0,&read_fd)) {
+    return 1;
+  }
+  return 0;
+}
+
 class X {
  public:
   static void sleep (double s) {
@@ -33,23 +51,13 @@ class X {
       cin >> str;
       return str;
     } else {
-      string str;
       clock_t before = clock();
-      clock_t difference;
-      while (!_kbhit()) {
-        if ((clock() - before) / CLOCKS_PER_SEC >= 5) {
-          return "";
-        }
+      while(!kbhit()) {
+        if ((clock() - before) / CLOCKS_PER_SEC >= s) {
+      	  return "";
+	}
       }
       return "CHEATER";
-      /*do {
-        getline(cin, str);
-        difference = clock() - before;
-        //cin >> str;
-        //usleep(5 * timeMultiplier);
-        cout << (double)difference * 1000 / CLOCKS_PER_SEC << endl;
-        //usleep(1 * timeMultiplier);
-      } while ((double)difference * 1000 / CLOCKS_PER_SEC < 5.0);*/
     }
   }
   static void userout (string str, bool isWords = false) {
