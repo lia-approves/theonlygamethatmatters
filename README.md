@@ -1,5 +1,8 @@
 # theonlygamethatmatters
 
+
+https://github.com/the-legend-of-lia/theonlygamethatmatters
+
 This is my final project for my CCS ethics class.  I'm quite excited by visual novel and choose-your-own-adventure type games: I definitely read quite a few books like that and liked Oregon Trail growing up, and enjoyed playing games in recent years like Hatoful Boyfriend, Doki Doki Literature Club, and Dead Wishes.  I also think that VR/AR is a really exciting medium to take this kind of interactive storytelling to a whole other level, which really redefines LARPing (Live Action Role Playing) like Niantic's Pokemon Go and Harry Potter games.  Earlier this year, I went to AthenaHacks and heard a really awesome keynote by Morgan Mercer, the founder and CEO of a startup called Vantage Point, which seeks to use VR/AR technology to help anti-sexual harrassment and soft skills training.
 
 I wanted to experiment with this idea of immersing someone in the position of having to make decisions on ethical dilemmas.  I sometimes wonder if any individual who considers themselves a moral and upright human being, is so due to their own internal set of morals and values, or just due to circumstance.  If you put someone in an ethically questionable situation they have never experienced, what would they do?  Likewise, if you put someone in a simulation of an ethically questionable scenario relating to an ethical violation they have committed in the past, do they feel guilt or become more self-aware of their choices?
