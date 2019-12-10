@@ -42,7 +42,7 @@ static int kbhit(void) {
 class X {
  public:
   static void sleep (double s) {
-    usleep(s * timeMultiplier);
+    usleep(s * 1.0 * timeMultiplier);
   }
   static string userin (double s = 0.0) {
     if (s == 0.0) {
